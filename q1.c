@@ -8,12 +8,14 @@ struct cust_detail{
 	int balance;
 	char custName[20];
 }arr_struct[40];
+struct cust_detail *arr_ptr[100]; //max 100 entries
 
 void depositMoney(int accNo,int depAmt);
 void display();
 void withdrawMoney(int accNo, int withAmt);
-void create(char* , int, int ); //need to improve
+void create(char* , int, int); //need to improve
 void dummyEntries();
+//void addCust();
 
 int no_of_customer=0;
 
@@ -75,11 +77,21 @@ int main(){
 				dummyEntries();
 				break;
 
+			case 9:
+				//addCust();
+				break;
+
 			case 7: 
 				exit(0);
 		}
 	}
 	
+}
+
+void addCust(){
+	arr_ptr[no_of_customer] = (struct cust_detail *)malloc(sizeof(struct cust_detail));
+
+
 }
 
 void dummyEntries(){
