@@ -14,20 +14,21 @@ int main(){
 
 	struct teacher_data *s_ptr;
 	s_ptr = (struct teacher_data *)ptr;
-
-	t[no_of_teachers++] = *s_ptr;
-
-
-
+	
+	s_ptr->teacher_id = 40;
+	t[no_of_teachers++] = *s_ptr;  //*s_ptr important
 
 
-	//t[0].teacher_id = 88;
-	//display();
+
+
+
+	t[1].teacher_id = 88;
+	display();
 }
 
 void display(){
-	for(int i=0; i<1; i++)
+	for(int i=0; i<2; i++)
 	{
-		printf("[%d]\n", t[0].teacher_id);
+		printf("[%d]\n", t[i].teacher_id);
 	}
 }
