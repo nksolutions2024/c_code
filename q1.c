@@ -12,29 +12,24 @@ struct cust_detail{
 void depositMoney(int accNo,int depAmt);
 void display();
 void withdrawMoney(int accNo, int withAmt);
-void create(char* ccname,int temp2, int x );
+void create(char* , int, int ); //need to improve
+void dummyEntries();
 
-//this variable will increment with new entry
-//this keep record of entries and mapping with structure accordingly
-//ex: arr_struct[0] to accNo 100
-// [1] to 101
 int no_of_customer=0;
 
 int main(){
-	int choice,temp2,temp3,temp4,temp5,assigningNo;
+	int choice;
+	int temp2,temp3,temp4,temp5,assigningNo;
 	char* ccname;
  
-	arr_struct[0].accNo=100; // assigned automatically
-	arr_struct[0].initAmt=4000;
-	arr_struct[0].balance=4000; 
-	strcpy(arr_struct[0].custName,"Gopal");
-	arr_struct[1].accNo=101; // assigned automatically
-	arr_struct[1].initAmt=5000;
-	arr_struct[1].balance=5800; //initially balance same as initAmt
-	strcpy(arr_struct[1].custName,"Gopal1");
+	arr_struct[0].accNo=888; 
+	arr_struct[0].initAmt=8888;
+	arr_struct[0].balance=8888; 
+	strcpy(arr_struct[0].custName,"empty");
 	
 	while(1){
-		printf("enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit\n");
+		printf("enter 1->create 2->deposit 3->withdraw 6->displayall\n");
+		printf("7->exit 8->dummy_2entries \n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
@@ -70,7 +65,12 @@ int main(){
 				withdrawMoney(temp4, temp3 );
 				break;
 
-			case 6: display();
+			case 6: 
+				display();
+				break;
+
+			case 8:
+				dummyEntries();
 				break;
 
 			case 7: exit(0);
@@ -80,6 +80,21 @@ int main(){
 	display();
 	depositMoney(100,888);	
 	display();
+}
+
+void dummyEntries(){
+	arr_struct[0].accNo=100; // assigned automatically
+	arr_struct[0].initAmt=4000;
+	arr_struct[0].balance=4000; 
+	strcpy(arr_struct[0].custName,"Gopal");
+	no_of_customer++; //incremented to 1
+	arr_struct[1].accNo=101; // assigned automatically
+	arr_struct[1].initAmt=5000;
+	arr_struct[1].balance=5800; //initially balance same as initAmt
+	strcpy(arr_struct[1].custName,"Gopal1");
+	no_of_customer++; //incremented to 2
+
+	printf("\ndummy entries created successfully\n");	
 }
 
 void create(char* ccname,int temp5,int assigningNo ){
@@ -112,12 +127,14 @@ void depositMoney(int accNo,int depAmt){
 }
 
 void display(){
-	for(int i=0;i<2;i++)
+	for(int i=0; i<no_of_customer; i++)
 	{
-		printf("\n account No. %d \n", arr_struct[i].accNo);
-		printf("\n C name %s \n", arr_struct[i].custName);
-		printf("\n initial Amt %d \n", arr_struct[i].initAmt);
-		printf("\n balance %d \n", arr_struct[i].balance);
+		printf("account No. %d \n", arr_struct[i].accNo);
+		printf("Customer name %s \n", arr_struct[i].custName);
+		printf("initial Amt %d \n", arr_struct[i].initAmt);
+		printf("balance %d \n", arr_struct[i].balance);
+		printf("\n");
 		
 	}
+	printf("\n");
 }
