@@ -9,20 +9,21 @@ struct teacher_data{
 void display();
 
 int main(){
-	void *ptr;
-	ptr = malloc(sizeof(struct teacher_data));
 
 	struct teacher_data *s_ptr;
-	s_ptr = (struct teacher_data *)ptr;
+	s_ptr = (struct teacher_data *)malloc(sizeof(struct teacher_data));
 	
-	s_ptr->teacher_id = 40;
+	//firstly, storing in s_ptr temporarily
+	//then copying to t[0]
+	//dereferencing *s_ptr
+	s_ptr->teacher_id = 404; 
 	t[no_of_teachers++] = *s_ptr;  //*s_ptr important
 
 
 
 
 
-	t[1].teacher_id = 88;
+	t[1].teacher_id = 88; //assigning directlt in struct
 	display();
 }
 
