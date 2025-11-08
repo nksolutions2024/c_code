@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 
-//structure creation
 struct cust_detail{
 	int accNo;
 	int initAmt;
@@ -24,14 +23,14 @@ int no_of_customer=0;
 int main(){
 	int choice,temp2,temp3,temp4,temp5,assigningNo;
 	char* ccname;
-	//dummpy 2 entries for debugging purpose 
+ 
 	arr_struct[0].accNo=100; // assigned automatically
 	arr_struct[0].initAmt=4000;
-	arr_struct[0].balance=4000; //initially same
+	arr_struct[0].balance=4000; 
 	strcpy(arr_struct[0].custName,"Gopal");
 	arr_struct[1].accNo=101; // assigned automatically
 	arr_struct[1].initAmt=5000;
-	arr_struct[1].balance=5800; //initially same
+	arr_struct[1].balance=5800; //initially balance same as initAmt
 	strcpy(arr_struct[1].custName,"Gopal1");
 	
 	while(1){
@@ -45,9 +44,14 @@ int main(){
 				printf("Enter inital amount: \n");
 				scanf("%d",&temp5); //init amt
 				printf("\n");
-				assigningNo = 100+no_of_customer; 	//assigning acc no. and mapping
-				create(ccname, temp5, assigningNo );  //assigning acc no. and mapping
+				assigningNo = 100+no_of_customer;
+				//assigning acc no. and mapping
+				
+				create(ccname, temp5, assigningNo );
+				//assigning acc no. and mapping
+				
 				break;
+
 			case 2:
 				printf("please enter your acc no. \n");
 				scanf("%d",&temp4);
@@ -57,6 +61,7 @@ int main(){
 				depositMoney(temp4, temp3 );
 				display(); //temp2
 				break;
+
 			case 3:
 				printf("please enter your acc no. \n");
 				scanf("%d",&temp4);
@@ -64,8 +69,10 @@ int main(){
 				scanf("%d",&temp3);
 				withdrawMoney(temp4, temp3 );
 				break;
+
 			case 6: display();
 				break;
+
 			case 7: exit(0);
 		}
 	}
@@ -80,7 +87,7 @@ void create(char* ccname,int temp5,int assigningNo ){
 	//below code, storing into particular struct 
 	strcpy(arr_struct[mappedNo].custName, ccname);
 	arr_struct[mappedNo].initAmt = temp5;
-	arr_struct[mappedNo].balance = temp5; //balance is equal to initialAMT
+	arr_struct[mappedNo].balance = temp5; //balance is equal to initialAmt
 	arr_struct[mappedNo].accNo = assigningNo; 
 }
 

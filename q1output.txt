@@ -1,0 +1,98 @@
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/250840130044$ gcc q1.c
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/250840130044$ ./a.out
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+1
+Enter name: 
+tom
+Enter inital amount: 
+2000
+
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+6
+
+ account No. 100 
+
+ C name tom 
+
+ initial Amt 2000 
+
+ balance 2000 
+
+ account No. 101 
+
+ C name Gopal1 
+
+ initial Amt 5000 
+
+ balance 5800 
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+2
+please enter your acc no. 
+100 
+enter deposit amt
+800
+
+ account No. 100 
+
+ C name tom 
+
+ initial Amt 2000 
+
+ balance 2800 
+
+ account No. 101 
+
+ C name Gopal1 
+
+ initial Amt 5000 
+
+ balance 5800 
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+2
+please enter your acc no. 
+100
+enter deposit amt
+408
+
+ account No. 100 
+
+ C name tom 
+
+ initial Amt 2000 
+
+ balance 3208 
+
+ account No. 101 
+
+ C name Gopal1 
+
+ initial Amt 5000 
+
+ balance 5800 
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+3
+please enter your acc no. 
+100
+enter withdraw amt
+140
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+6
+
+ account No. 100 
+
+ C name tom 
+
+ initial Amt 2000 
+
+ balance 3068 
+
+ account No. 101 
+
+ C name Gopal1 
+
+ initial Amt 5000 
+
+ balance 5800 
+enter 1->create 2->deposit 3->withdraw 6->displayall 7->exit
+7
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/250840130044$
