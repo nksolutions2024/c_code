@@ -6,10 +6,12 @@ struct teacher_data{
 	int teacher_id;
 }t[40];
 
+struct teacher_data *arr_ptr[16];
+
 void display();
+void display1();
 
 int main(){
-
 	struct teacher_data *s_ptr;
 	s_ptr = (struct teacher_data *)malloc(sizeof(struct teacher_data));
 	
@@ -19,17 +21,23 @@ int main(){
 	s_ptr->teacher_id = 404; 
 	t[no_of_teachers++] = *s_ptr;  //*s_ptr important
 
+	arr_ptr[0] = (struct teacher_data *)malloc(sizeof(struct teacher_data));
+	arr_ptr[0]->teacher_id = 24;
 
-
-
-
-	t[1].teacher_id = 88; //assigning directlt in struct
 	display();
+	display1();
 }
 
 void display(){
 	for(int i=0; i<2; i++)
 	{
 		printf("[%d]\n", t[i].teacher_id);
+	}
+}
+
+void display1(){
+	for(int i=0; i<1; i++)
+	{
+		printf("{%d}\n", arr_ptr[i]->teacher_id);
 	}
 }
