@@ -7,6 +7,8 @@ struct node{
 };
 
 struct node *k1, *k2;
+struct node *head;
+head = NULL;
 
 void display();
 void create_2nodes();
@@ -26,7 +28,9 @@ int main(){
 		switch(choice)
 		{
 			case 1:
-				printf("case 1\n");
+				printf("Enter element to insertAtEnd: \n");
+				scanf("%d",&ele);
+				insertAtEnd(ele);
 				break;
 
 			case 8:
@@ -39,8 +43,22 @@ int main(){
 	}
 }
 
-void insertAtEnd(){
+void insertAtEnd(int ele){
 	struct node *et1;
+	et1 = (struct node *)malloc(sizeof(struct node));
+	et1->data = ele;
+	et1->next = NULL;
+
+	//first node creation
+	if(head==NULL)
+	{
+		head = et1;
+		return;
+	}
+	else
+	{
+		printf("head is not null\n");	
+	}
 
 }
 
@@ -50,6 +68,7 @@ void create_2nodes(){
 	int ele = 1;
 	k1->data = ele;
 	k1->next = NULL;
+	head = k1;
 	
 	//struct node *k2;
 	k2 = (struct node *)malloc((sizeof(struct node)));
