@@ -8,7 +8,7 @@ struct node{
 
 struct node *k1, *k2;
 struct node *head;
-head = NULL;
+//head = NULL;
 
 void display();
 void create_2nodes();
@@ -23,14 +23,15 @@ int main(){
 
 	while(1)
 	{
-		printf("Enter 1-> 8->display 9->exit");
+		printf("Enter 1-> 8->display 9->exit\n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
 			case 1:
 				printf("Enter element to insertAtEnd: \n");
-				scanf("%d",&ele);
-				insertAtEnd(ele);
+//				scanf("%d",&ele);
+//				insertAtEnd(ele);
+//				insertAtEnd(3);
 				break;
 
 			case 8:
@@ -42,7 +43,7 @@ int main(){
 		}
 	}
 }
-
+/*
 void insertAtEnd(int ele){
 	struct node *et1;
 	et1 = (struct node *)malloc(sizeof(struct node));
@@ -61,6 +62,7 @@ void insertAtEnd(int ele){
 	}
 
 }
+*/
 
 void create_2nodes(){
 	//struct node *k1;
