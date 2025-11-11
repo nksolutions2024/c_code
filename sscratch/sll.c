@@ -7,7 +7,7 @@ struct node{
 };
 
 struct node *k1, *k2;
-struct node *head;
+//struct node *head;
 //head = NULL;
 
 void display();
@@ -15,6 +15,10 @@ void create_2nodes();
 void insert();
 
 int main(){
+	//struct node *head = NULL;
+	struct node *head;
+	head = NULL;
+
 	create_2nodes();
 	display();
 
@@ -70,7 +74,7 @@ void create_2nodes(){
 	int ele = 1;
 	k1->data = ele;
 	k1->next = NULL;
-	head = k1;
+//	head = k1;
 	
 	//struct node *k2;
 	k2 = (struct node *)malloc((sizeof(struct node)));
