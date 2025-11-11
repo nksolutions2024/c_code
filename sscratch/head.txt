@@ -2,3 +2,20 @@ Enter 1-> 8->display 9->exit
 7
 head is (nil)
 
+
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/sscratch$ gcc sll.c 
+In file included from /usr/include/stdlib.h:31,
+                 from sll.c:2:
+sll.c: In function ‘main’:
+sll.c:20:10: error: incompatible types when assigning to type ‘struct node’ from type ‘void *’
+   20 |  *head = NULL;
+      |          ^~~~
+sll.c:42:22: warning: format ‘%p’ expects argument of type ‘void *’, but argument 2 has type ‘struct node’ [-Wformat=]
+   42 |     printf("head is %p\n", *head);
+      |                     ~^     ~~~~~
+      |                      |     |
+      |                      |     struct node
+      |                      void *
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/sscratch$ 
+
+`

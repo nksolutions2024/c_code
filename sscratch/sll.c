@@ -17,7 +17,7 @@ void insert();
 int main(){
 	//struct node *head = NULL;
 	struct node *head;
-	head = NULL;
+	*head = NULL;
 
 	create_2nodes();
 	display();
@@ -39,7 +39,7 @@ int main(){
 				break;
 
 			case 7:
-				printf("head is %p\n", head);
+				printf("head is %p\n", *head);
 				break;
 
 			case 8:
