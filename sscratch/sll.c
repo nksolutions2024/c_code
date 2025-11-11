@@ -39,6 +39,11 @@ int main(){
 	}
 }
 
+void insertAtEnd(){
+	struct node *et1;
+
+}
+
 void create_2nodes(){
 	//struct node *k1;
 	k1 = (struct node *)malloc(sizeof(struct node));
