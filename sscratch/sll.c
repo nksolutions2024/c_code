@@ -15,9 +15,10 @@ void create_2nodes();
 void insert();
 
 int main(){
-	//struct node *head = NULL;
+//	struct node *head = NULL;
 	struct node *head;
-	*head = NULL;
+//	*head = NULL;//error(gg understood )
+	head = NULL;
 
 	create_2nodes();
 	display();
@@ -39,7 +40,8 @@ int main(){
 				break;
 
 			case 7:
-				printf("head is %p\n", *head);
+				//not tried yet(below code)
+			//	printf("head pointing node's data is %d\n", (*head)->data);
 				break;
 
 			case 8:
