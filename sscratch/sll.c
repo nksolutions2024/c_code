@@ -38,6 +38,10 @@ int main(){
 //				insertAtEnd(3);
 				break;
 
+			case 7:
+				printf("head is %p\n", head);
+				break;
+
 			case 8:
 				display();
 				break;
@@ -92,4 +96,5 @@ void display(){
 	printf("-->[%d]", k2->data);
 
 	printf("\n");
+//	printf("head is %p\n", head);
 }
