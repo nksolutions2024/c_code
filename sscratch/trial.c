@@ -6,6 +6,8 @@ int main(){
 	//printf("%d\n", *p);
 	//
 	int *p;
+	int x;
+	p = &x;
 	*p=40;
 	printf("%d\n", *p);
 }
