@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 struct node{
 	int data;
@@ -12,14 +13,16 @@ void create_2nodes();
 void insert();
 
 int main(){
+	//struct node *k1, *k2;
 
 	create_2nodes();
-	//display();
+	display();
 
 }
 
 void create_2nodes(){
 	//struct node *k1;
+	k1 = (struct node *)malloc(sizeof(struct node));
 	int ele = 1;
 	k1->data = ele;
 	k1->next = NULL;
@@ -35,7 +38,7 @@ void create_2nodes(){
 }
 
 void display(){
-	//printf("-->[%d]", k1->data);
+	printf("-->[%d]", k1->data);
 	//printf("-->[%d]", k2->data);
 
 }
