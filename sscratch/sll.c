@@ -127,7 +127,7 @@ void display_legally(struct node * head8){
 		printf("-->[%d]", dlt1->data);
 		dlt1 = dlt1->next;
 	}
-	printf("/n");
+	printf("\n");
 
 	printf("exiting d_l() ....\n");
 }
