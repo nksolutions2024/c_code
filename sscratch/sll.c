@@ -13,6 +13,7 @@ struct node *k1, *k2;
 void display();
 void create_2nodes();
 void insert();
+void display_legally(struct node **);
 
 int main(){
 	struct node *head;
@@ -37,6 +38,10 @@ int main(){
 //				insertAtEnd(3);
 				break;
 
+			case 6:
+				display_legally(&head);//ccritical thing_1
+				break;
+
 			case 7:
 				//not tried yet(below code)
 			//	printf("head pointing node's data is %d\n", (*head)->data);
@@ -59,6 +64,8 @@ void insertAtEnd(int ele){
 	et1->data = ele;
 	et1->next = NULL;
 
+	k2->next = et1;
+
 	//first node creation
 	if(head==NULL)
 	{
@@ -72,7 +79,6 @@ void insertAtEnd(int ele){
 
 }
 */
-
 void create_2nodes(){
 	//struct node *k1;
 	k1 = (struct node *)malloc(sizeof(struct node));
@@ -97,5 +103,19 @@ void display(){
 	printf("-->[%d]", k2->data);
 
 	printf("\n");
-//	printf("head is %p\n", head);
 }
+
+void display_legally(struct node ** head8){
+	struct node * dlt1;
+	dlt1 = (struct node *)malloc(sizeof(struct node));
+	//ccritical thing_2
+	dlt1 = *head8 ; //temporarily head give; maybe rectified
+
+	//check not missing one node
+	while(dlt1->next != NULL){
+		printf("-->[%d]", dlt1->data);
+		dlt1 = dlt1->next;
+	}
+}
+
+
