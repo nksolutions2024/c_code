@@ -48,6 +48,30 @@ int main(){
 				printf("head pointing node's data is %d\n", (head)->data);
 				printf("k1-node's data is %d\n", k1->data);
 				break;
+/*
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/sscratch$ ./a.out
+-->[1]-->[2]
+Enter 1-> 6->display_l 9->exit
+1
+Enter element to insertAtEnd: 
+Enter 1-> 6->display_l 9->exit
+6
+entering d_l()
+-->[1]-->[2]
+exiting d_l() ....
+Enter 1-> 6->display_l 9->exit
+8
+head of ll is 0x55b8b55362a0
+-->[1]-->[2]
+Enter 1-> 6->display_l 9->exit
+7
+head pointing node's data is 1
+k1-node's data is 1
+Enter 1-> 6->display_l 9->exit
+9
+desd2@desd-OptiPlex-5050:~/Music/embc/c_code/sscratch$ 
+
+*/
 
 			case 8:
 				printf("head of ll is %p\n", head);
