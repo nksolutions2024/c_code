@@ -15,9 +15,7 @@ void create_2nodes();
 void insert();
 
 int main(){
-//	struct node *head = NULL;
 	struct node *head;
-//	*head = NULL;//error(gg understood )
 	head = NULL;
 
 	create_2nodes();
@@ -45,6 +43,7 @@ int main(){
 				break;
 
 			case 8:
+				printf("head of ll is %p\n", head);
 				display();
 				break;
 
