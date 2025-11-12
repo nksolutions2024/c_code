@@ -101,6 +101,8 @@ void create_2nodes(struct node * head9){
 
 	//node_1 next
 	//k1->next = k2;
+	//node_1 next modification ; linking two_nodes
+	k1->next = k2;
 }
 
 void display(){
@@ -110,6 +112,7 @@ void display(){
 	printf("\n");
 }
 
+//only 1 out 2 node ; displayed
 void display_legally(struct node * head8){
 	printf("entering d_l()\n");
 	struct node * dlt1;
@@ -124,6 +127,7 @@ void display_legally(struct node * head8){
 		printf("-->[%d]", dlt1->data);
 		dlt1 = dlt1->next;
 	}
+	printf("/n");
 
 	printf("exiting d_l() ....\n");
 }
