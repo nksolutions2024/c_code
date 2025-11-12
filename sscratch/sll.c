@@ -110,12 +110,14 @@ void display(){
 
 void display_legally(struct node * head8){
 	struct node * dlt1;
-	dlt1 = (struct node *)malloc(sizeof(struct node));
+	//malloc is not required for dlt1
+	
 	//ccritical thing_2(mistake3)
 	dlt1 = head8 ; //temporarily head give; maybe rectified
 
 	//check not missing one node
-	while(dlt1->next != NULL){
+	//dlt1_compare_NULL (mistake4)
+	while(dlt1 != NULL){
 		printf("-->[%d]", dlt1->data);
 		dlt1 = dlt1->next;
 	}
