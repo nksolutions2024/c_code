@@ -6,15 +6,12 @@ struct node{
 	struct node *next;
 };
 
+//written below one, to avoid entering nodes by scanf
 struct node *k1, *k2;
-//struct node *head;
-//head = NULL;
 
 void display();
 void create_2nodes(struct node *);
 void insert();
-//mistake1
-//function parameter struct node *
 void display_legally(struct node *);
 
 int main(){
@@ -24,12 +21,11 @@ int main(){
 	create_2nodes(head);
 	display();
 
-	int choice;
 	int ele;
-
+	int choice;
 	while(1)
 	{
-		printf("Enter 1-> 8->display 9->exit\n");
+		printf("Enter 1-> 6->display_l 9->exit\n");
 		scanf("%d",&choice);
 		switch(choice)
 		{
@@ -48,7 +44,9 @@ int main(){
 
 			case 7:
 				//not tried yet(below code)
-			//	printf("head pointing node's data is %d\n", (*head)->data);
+				//trying
+				printf("head pointing node's data is %d\n", (head)->data);
+				printf("k1-node's data is %d\n", k1->data);
 				break;
 
 			case 8:
