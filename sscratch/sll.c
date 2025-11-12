@@ -6,20 +6,21 @@ struct node{
 	struct node *next;
 };
 
+//liability
 //written below one, to avoid entering nodes by scanf
 struct node *k1, *k2;
 
 void display();
 void create_2nodes(struct node *);
-void insert();
+void insertAtEnd(struct node **, int);
 void display_legally(struct node *);
 
 int main(){
 	struct node *head;
 	head = NULL;
 
-	create_2nodes(head);
-	display();
+//	create_2nodes(head);
+//	display();
 
 	int ele;
 	int choice;
@@ -31,9 +32,9 @@ int main(){
 		{
 			case 1:
 				printf("Enter element to insertAtEnd: \n");
-//				scanf("%d",&ele);
-//				insertAtEnd(ele);
-//				insertAtEnd(3);
+				scanf("%d",&ele);
+				insertAtEnd(&head ,ele);//&head is important
+//				insertAtEnd(&head, 3);
 				break;
 			
 			case 6:
@@ -43,7 +44,7 @@ int main(){
 
 			case 8:
 				printf("head of ll is %p\n", head);
-				display();
+//				display();
 				break;
 
 			case 9:
@@ -51,28 +52,29 @@ int main(){
 		}
 	}
 }
-/*
-void insertAtEnd(int ele){
+
+void insertAtEnd(struct node ** special, int ele){
 	struct node *et1;
 	et1 = (struct node *)malloc(sizeof(struct node));
 	et1->data = ele;
 	et1->next = NULL;
 
-	k2->next = et1;
+	struct node * magic1;
+	magic1 = *special;
 
 	//first node creation
-	if(head==NULL)
+	//*special == Null is important
+	if(*special==NULL)
 	{
-		head = et1;
+		*special = et1; //*special is important
 		return;
 	}
 	else
 	{
 		printf("head is not null\n");	
 	}
-
 }
-*/
+
 void create_2nodes(struct node * head9){
 	//struct node *k1;
 	k1 = (struct node *)malloc(sizeof(struct node));
@@ -91,12 +93,6 @@ void create_2nodes(struct node * head9){
 	k1->next = k2;
 }
 
-void display(){
-	printf("-->[%d]", k1->data);
-	printf("-->[%d]", k2->data);
-
-	printf("\n");
-}
 
 void display_legally(struct node * head8){
 	printf("entering d_l()\n");
