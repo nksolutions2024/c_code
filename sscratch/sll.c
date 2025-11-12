@@ -13,7 +13,9 @@ struct node *k1, *k2;
 void display();
 void create_2nodes();
 void insert();
-void display_legally(struct node **);
+//mistake1
+//function parameter struct node *
+void display_legally(struct node *);
 
 int main(){
 	struct node *head;
@@ -40,7 +42,7 @@ int main(){
 			
 			//segmaentation fault in 6
 			case 6:
-				display_legally(&head);//ccritical thing_1
+				display_legally(head);//ccritical thing_1(mistake2)
 				break;
 
 			case 7:
@@ -106,11 +108,11 @@ void display(){
 	printf("\n");
 }
 
-void display_legally(struct node ** head8){
+void display_legally(struct node * head8){
 	struct node * dlt1;
 	dlt1 = (struct node *)malloc(sizeof(struct node));
-	//ccritical thing_2
-	dlt1 = *head8 ; //temporarily head give; maybe rectified
+	//ccritical thing_2(mistake3)
+	dlt1 = head8 ; //temporarily head give; maybe rectified
 
 	//check not missing one node
 	while(dlt1->next != NULL){
