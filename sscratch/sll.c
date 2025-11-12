@@ -11,7 +11,7 @@ struct node *k1, *k2;
 //head = NULL;
 
 void display();
-void create_2nodes();
+void create_2nodes(struct node *);
 void insert();
 //mistake1
 //function parameter struct node *
@@ -21,7 +21,7 @@ int main(){
 	struct node *head;
 	head = NULL;
 
-	create_2nodes();
+	create_2nodes(head);
 	display();
 
 	int choice;
@@ -82,13 +82,13 @@ void insertAtEnd(int ele){
 
 }
 */
-void create_2nodes(){
+void create_2nodes(struct node * head9){
 	//struct node *k1;
 	k1 = (struct node *)malloc(sizeof(struct node));
 	int ele = 1;
 	k1->data = ele;
 	k1->next = NULL;
-//	head = k1;
+	head9 = k1;
 	
 	//struct node *k2;
 	k2 = (struct node *)malloc((sizeof(struct node)));
