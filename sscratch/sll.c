@@ -38,7 +38,8 @@ int main(){
 				break;
 			
 			case 6:
-				head = k1; //it should be done by insert_function()
+				//creating issue
+			//	head = k1; //it should be done by insert_function()
 				display_legally(head);//ccritical thing_1(mistake2)
 				break;
 
