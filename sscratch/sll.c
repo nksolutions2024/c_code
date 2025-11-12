@@ -42,6 +42,7 @@ int main(){
 			
 			//segmaentation fault in 6
 			case 6:
+				head = k1; //it should be done by insert_function()
 				display_legally(head);//ccritical thing_1(mistake2)
 				break;
 
@@ -88,7 +89,8 @@ void create_2nodes(struct node * head9){
 	int ele = 1;
 	k1->data = ele;
 	k1->next = NULL;
-	head9 = k1;
+//	head9 = k1; mistake5 it is locally inside function
+//	can't modify head by this_function
 	
 	//struct node *k2;
 	k2 = (struct node *)malloc((sizeof(struct node)));
