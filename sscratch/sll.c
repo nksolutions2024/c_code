@@ -37,7 +37,8 @@ int main(){
 //				insertAtEnd(ele);
 //				insertAtEnd(3);
 				break;
-
+			
+			//segmaentation fault in 6
 			case 6:
 				display_legally(&head);//ccritical thing_1
 				break;
