@@ -109,6 +109,7 @@ void display(){
 }
 
 void display_legally(struct node * head8){
+	printf("entering d_l()\n");
 	struct node * dlt1;
 	//malloc is not required for dlt1
 	
@@ -121,6 +122,8 @@ void display_legally(struct node * head8){
 		printf("-->[%d]", dlt1->data);
 		dlt1 = dlt1->next;
 	}
+
+	printf("exiting d_l() ....\n");
 }
 
 
